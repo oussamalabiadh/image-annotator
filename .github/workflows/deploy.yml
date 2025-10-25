@@ -29,11 +29,11 @@ jobs:
         run: npm run build -- --configuration production
 
       - name: Copy index.html to 404.html
-        run: cp dist/image-annotator/index.html dist/image-annotator/404.html
+        run: cp dist/image-annotator/browser/index.html dist/image-annotator/browser/404.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist/image-annotator
+          folder: dist/image-annotator/browser
           commit-message: "Deploy from GitHub Actions"
