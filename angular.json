@@ -16,7 +16,6 @@
             "outputPath": "dist/image-annotator",
 
             "baseHref": "/image-annotator/",
-
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
