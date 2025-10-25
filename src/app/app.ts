@@ -40,7 +40,7 @@ drawImage() {
   this.loading.set(true);
 
   this.currentImgElement = new Image();
-  this.currentImgElement.src = `/assets/object/${this.currentImage}`;
+  this.currentImgElement.src = `assets/object/${this.currentImage}`;
   this.currentImgElement.onload = () => {
     this.imageWidth = this.currentImgElement.width;
     this.imageHeight = this.currentImgElement.height;
@@ -181,7 +181,7 @@ startDrawing(event: MouseEvent) {
     if (!this.currentImage || !this.annotations[this.currentImage]) return;
 
     const img = new window.Image();
-    img.src = `/assets/object/${this.currentImage}`;
+    img.src = `assets/object/${this.currentImage}`;
     img.onload = () => {
       this.ctx.clearRect(0, 0, img.width, img.height);
       this.ctx.drawImage(img, 0, 0);
@@ -217,9 +217,9 @@ markImageComplete(imageName: string) {
 }
 saveToLocalStorage() {
   const data = {
-    images: this.images(),         
-    annotations: this.annotations, 
-    date: new Date().toISOString() 
+    images: this.images(),
+    annotations: this.annotations,
+    date: new Date().toISOString()
   };
   localStorage.setItem('imageData', JSON.stringify(data));
 }
