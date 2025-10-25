@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write  # ✅ donne la permission au bot d'écrire sur gh-pages
+  contents: write  #  donne la permission au bot d'écrire sur gh-pages
 
 jobs:
   build-and-deploy:
