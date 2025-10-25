@@ -40,7 +40,7 @@ drawImage() {
   this.loading.set(true);
 
   this.currentImgElement = new Image();
-  this.currentImgElement.src = `assets/object/${this.currentImage}`;
+  this.currentImgElement.src = `/image-annotator/assets/object/${this.currentImage}`;
   this.currentImgElement.onload = () => {
     this.imageWidth = this.currentImgElement.width;
     this.imageHeight = this.currentImgElement.height;
@@ -181,7 +181,7 @@ startDrawing(event: MouseEvent) {
     if (!this.currentImage || !this.annotations[this.currentImage]) return;
 
     const img = new window.Image();
-    img.src = `assets/object/${this.currentImage}`;
+    img.src = `/image-annotator/assets/object/${this.currentImage}`;
     img.onload = () => {
       this.ctx.clearRect(0, 0, img.width, img.height);
       this.ctx.drawImage(img, 0, 0);
