@@ -33,4 +33,4 @@ jobs:
         with:
           branch: gh-pages
           folder: dist/image-annotator/browser
-          commit-message: "🚀 Deploy from GitHub Actions"
+          commit-message: " Deploy from GitHub Actions"
